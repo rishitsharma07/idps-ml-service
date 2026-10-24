@@ -1,9 +1,36 @@
+
+# Python virtual environment
 venv/
+.venv/
+
+# Python cache
 __pycache__/
-*.pyc
+*.py[cod]
+
+# Dataset files
 data/
 
-# Ignore artifacts by default, but keep trained model files
+# Generated packet captures and traffic reports
+*.pcap
+*.pcapng
+extracted_packets.csv
+extracted_flows.csv
+classified_flows.csv
+backend_ingestion_results.csv
+# Model artifacts: ignore everything except trained files
 artifacts/*
 !artifacts/model.joblib
 !artifacts/encoders.joblib
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Keep example environment configuration
+!.env.example
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
